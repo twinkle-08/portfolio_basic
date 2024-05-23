@@ -1,100 +1,60 @@
 *{
-    margin:0px;
-    padding:0px;
+    margin:0;
+    padding:0;
     box-sizing:border-box;
 }
-body {
+.wrapper{
     height:100vh;
-    width:100vw;
-    background-color:rgb(194, 235, 235);
+    overflow-x:hidden;
+    overflow-y:auto;
+}
+.container{
+    height:100%;
+    max-width:1200px;
+    margin:0 auto;
+    padding:20px;
+}
+h1{
+    text-align:center;
+    margin:20px 0;
+    margin-bottom:20px;
+    font-size:3rem;
+}
+.gallery{
     display:flex;
-    flex-direction:column;
+    flex-wrap:wrap;
     justify-content:space-between;
 }
-button{
-    background-color:rgb(18,155,155);
-    padding:4px 10px;
-    color:white;
-    cursor:pointer;
-    border:1px solid white;
-    border-radius:5px;
-    font-weight:600px;
-    width:min-content;
-}
-button:hover{
-    background-color: white;
-    color:black;
-    border:1px solid black;
-}
-nav{
-    display:flex;
-    width:100%;
-    align-items:center;
-    justify-content:space-around;
-}
-nav .logo{
-    font-weight:700;
-    font-size:30px;
-}
-nav ul{
-    display:flex;
-    align-items:center;
-    gap:30px;
-    font-weight:500px;
-}
-nav ul li:hover{
-    text-decoration:underline;
-    font-weight:900;
-    user-select:none;
-}
-li{
-    list-style:none;
-    cursor:pointer;
-}
-texto {
-    display:flex;
-    gap:35px;
-}
-.hero-section{
-    display:flex;
-    align-items:center;
-    padding:60px 60px;
-}
-.hero-section-left h1{
-    font-size:40px;
-    font-weight:700;
-    margin-bottom:20px;
-}
-.hero-section-left h1 span{
-    color:rgb(18,155,155);
-    font-weight:900;
-    font-size:50px;
-}
-.hero-section-left p{
-    font-weight:500;
-}
-.hero-section-left p span{
-    font-weight:700;
-    color:rgb(18,155,155);
-    font-size:25px;
-}
-.hero-section-right {
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    width:60%;
-    justify-content:flex-end;
+.hdc{
+    width:22%;
     position:relative;
-    left:200px;
+    margin-bottom:20px;
+    border-radius:10px;
+    overflow:hidden;
 }
-.last-section{
-    display:flex;
-    align-items:center;
-    padding:20px 0px;
-    justify-content:space-around;
+.hdc img{
+    width:100%;
+    height:100%;
+    filter:grayscale(100%);
+    box-shadow:0 0 20px #333;
 }
-.last-2-section ul{
-    display:flex;
-    align-items:flex-end;
-    gap:30px;
+.hdc:hover{
+    transform:scale(1.03);
+    filter:drop-shadow(0 0 20px #333);
+    transition:0.3s;
+}
+   
+
+.hdc:hover img{
+    filter:grayscale(0%);
+}
+.hdc figcaption{
+    position:absolute;
+    color:#fff;
+    bottom:0;
+    top:0;
+    padding:25px;
+    width:100%;
+    height:20%;
+    transition:0.3s;
 }
